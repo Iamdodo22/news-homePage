@@ -60,6 +60,9 @@ body {
   color: hsl(236, 13%, 42%);
   font-size: 1.8rem;
 }
+.nav-links a:active, .nav-links a:hover {
+  color: hsl(5, 85%, 63%);
+}
 
 .menu {
   display: none;
@@ -141,6 +144,10 @@ body {
   padding-inline: 1rem;
   padding-block: 0.5rem;
   letter-spacing: 1px;
+  cursor: pointer;
+}
+.grid-1--left p span:active, .grid-1--left p span:hover {
+  background-color: hsl(240, 100%, 5%);
 }
 .grid-1--right {
   background-color: hsl(240, 100%, 5%);
@@ -159,6 +166,9 @@ body {
 .grid-1--right span div:not(:last-child) {
   border-bottom: 1px solid hsl(233, 8%, 79%);
   padding-bottom: 1rem;
+}
+.grid-1--right span div h3:hover, .grid-1--right span div h3:active {
+  color: hsl(35, 77%, 62%);
 }
 .grid-1--right span div p {
   color: hsl(233, 8%, 79%);
@@ -209,6 +219,9 @@ body {
 .grid-2 div span h4 {
   color: hsl(240, 100%, 5%);
   font-size: 1.5rem;
+}
+.grid-2 div span h4:active, .grid-2 div span h4:hover {
+  color: hsl(5, 85%, 63%);
 }
 .grid-2 div span p {
   color: hsl(236, 13%, 42%);

@@ -37,6 +37,10 @@
                 padding-inline: 1rem;
                 padding-block: .5rem;
                 letter-spacing: 1px;
+                cursor: pointer;
+                &:active,&:hover{
+                    background-color: $very-dark--blue;
+                }
             }
         }
     }
@@ -55,6 +59,11 @@
                 &:not(:last-child){
                   border-bottom: 1px solid $grayish-blue;  
                   padding-bottom: 1rem;
+                }
+                h3{
+                    &:hover,&:active{
+                        color: $p-orange;
+                    }
                 }
                 p{
                     color: $grayish-blue;
@@ -97,6 +106,9 @@
         h4{
             color: $very-dark--blue;
             font-size: 1.5rem;
+            &:active,&:hover{
+                color: $p-red;
+            }
         }
         p{
             color: $dark-grayish--blue;
