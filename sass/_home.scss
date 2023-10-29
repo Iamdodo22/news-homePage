@@ -1,0 +1,106 @@
+.main{
+    padding-inline: 8rem;
+    padding-bottom: 8rem;
+    @include response(phone){
+        padding-inline: 4rem;
+    }
+}
+.grid-1{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 1rem;
+    margin-bottom: 5rem;
+    @include response(phone){
+        grid-template-columns:1fr; 
+    }
+    &--left{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 15rem 1fr;
+        column-gap: 2rem;
+        @include response(phone){
+            @include colflex;
+
+        }
+        h2{
+            font-size: 2.5rem;
+            font-weight: bolder;
+            text-align: left;
+        }
+        p{
+            font-size: 1rem;
+            @include colflex;
+            span{
+                color: $Off-white;
+                background-color: $p-red;
+                align-self: start;
+                padding-inline: 1rem;
+                padding-block: .5rem;
+                letter-spacing: 1px;
+            }
+        }
+    }
+
+    &--right{
+        background-color: $very-dark--blue;
+        color: $Off-white;
+        span{
+            padding: 1rem;
+            @include colflex;
+            h2{
+                font-size: 2.5rem;
+                color: $p-orange;
+            }
+            div{
+                &:not(:last-child){
+                  border-bottom: 1px solid $grayish-blue;  
+                  padding-bottom: 1rem;
+                }
+                p{
+                    color: $grayish-blue;
+                }
+            }
+        }
+    }
+}
+.img-xl{
+    width: 100%;
+    grid-column: span 2;
+    height: 100%;
+    @include response(phone){
+        display: none;
+    }
+}
+.hidden{
+    display: none;
+    @include response(phone){
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.grid-2{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    grid-template-rows: repeat(3, 10rem);
+    gap: 1rem;
+    div{
+        @include rowflex;
+        // padding-bottom: 2rem;
+       span{
+        @include colflex;
+        h3{
+            color: $grayish-blue;
+            font-size: 2rem;
+        }
+        h4{
+            color: $very-dark--blue;
+            font-size: 1.5rem;
+        }
+        p{
+            color: $dark-grayish--blue;
+        }
+       }
+    }
+}

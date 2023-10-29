@@ -1,0 +1,49 @@
+// variables ..
+$p-orange: hsl(35, 77%, 62%);
+$p-red: hsl(5, 85%, 63%);
+
+$Off-white: hsl(36, 100%, 99%);
+$grayish-blue: hsl(233, 8%, 79%);
+$dark-grayish--blue: hsl(236, 13%, 42%);
+$very-dark--blue: hsl(240, 100%, 5%);
+
+$font-inter: 'Inter', sans-serif;
+// mixins ....
+@mixin rowflex($gap:1rem){
+    display: flex;
+    flex-direction: row;
+    gap: $gap;
+}
+@mixin colflex($gap:1rem){
+    display: flex;
+    flex-direction: column;
+    gap: $gap;
+}
+
+//media manager
+@mixin response($breakpoint){
+ @if $breakpoint == phone{@media only screen and (max-width:620px) {
+    @content
+ }}
+ @if $breakpoint == tab-port{@media only screen and (max-width:900px) {
+    @content
+ }}
+ @if $breakpoint == tab-land{@media only screen and (max-width:1200px) {
+    @content
+ }}
+}
+
+
+html{
+    font-size: 62.5%;
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    overflow-x: hidden;
+    width: 100vw;
+    font-family: $font-inter;
+}

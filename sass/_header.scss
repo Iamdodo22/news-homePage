@@ -1,0 +1,63 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-inline: 8rem;
+    padding-block: 5rem;
+    @include response(phone){
+        padding-inline: 4rem;
+    }
+}
+.logo{
+    width: 4rem;
+    img{
+        width: 100%;
+    }
+}
+
+.nav-links{
+    @include rowflex($gap:2rem);
+     @include response(phone){
+        // display: none;
+        position: fixed;
+        flex-direction: column;
+        top: 0;
+        right: 0;
+        width: 0;
+        height: 100vh;
+        background-color: $Off-white;
+        padding-top: 15rem;
+        padding-left: 5rem;
+        font-size: 2.5rem;
+        z-index: 44;
+        transition: all .5s;
+    }
+    a{
+        text-decoration: none;
+        color: $dark-grayish--blue;
+        font-size: 1.8rem;
+    }
+}
+.menu{
+    display: none;
+    @include response(phone){
+        display: block;
+        position: fixed;
+        top: 5rem;
+        right: 4rem;
+    }
+   .menuOpen{
+    transition: all .5s;
+   }
+}
+.menuClose{
+    display: none;
+    transition: all .5s;
+    @include response(phone){
+        // display: block;
+        position: fixed;
+        top: 5rem;
+        right: 4rem;
+        z-index: 55;
+    }
+}
