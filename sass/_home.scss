@@ -84,10 +84,10 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
     grid-template-rows: repeat(3, 10rem);
-    gap: 1rem;
+    gap: 2rem;
+    
     div{
         @include rowflex;
-        padding-bottom: 2rem;
        span{
         @include colflex;
         h3{
